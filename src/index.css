@@ -6,6 +6,59 @@
 
 @layer base {
   :root {
+    /* Light mode (default) */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 265 89% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for Striveframe - Light mode */
+    --gradient-start: 210 40% 98%;
+    --gradient-mid: 220 40% 96%;
+    --gradient-end: 230 40% 94%;
+    
+    --glass-bg: 0 0% 100%;
+    --glass-border: 214 32% 91%;
+    
+    --glow-primary: 199 89% 48%;
+    --glow-accent: 265 89% 62%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
     --background: 222 47% 6%;
     --foreground: 210 40% 98%;
 
@@ -34,9 +87,7 @@
     --input: 217 33% 17%;
     --ring: 199 89% 48%;
 
-    --radius: 0.75rem;
-
-    /* Custom tokens for Striveframe */
+    /* Custom tokens for Striveframe - Dark mode */
     --gradient-start: 222 47% 6%;
     --gradient-mid: 230 45% 10%;
     --gradient-end: 240 40% 8%;
@@ -70,6 +121,10 @@
 }
 
 @layer utilities {
+  .font-display {
+    font-family: "SB Skate Blade", system-ui, sans-serif;
+  }
+
   .bg-gradient-main {
     background: linear-gradient(
       135deg,
@@ -84,6 +139,14 @@
       ellipse at top,
       hsl(var(--gradient-mid)) 0%,
       hsl(var(--gradient-start)) 60%
+    );
+  }
+
+  .bg-gradient-subtle {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--gradient-mid)) 100%
     );
   }
 
@@ -121,7 +184,7 @@
 }
 
 @layer components {
-  .input-dark {
+  .input-styled {
     @apply w-full px-4 py-3 bg-input border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200;
   }
 

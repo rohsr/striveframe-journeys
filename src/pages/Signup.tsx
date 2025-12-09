@@ -1,15 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { AuthCard } from "@/components/AuthCard";
-import { Logo } from "@/components/Logo";
 
 const Signup = () => {
   return (
     <AuthCard>
       <div className="text-center mb-8">
-        <div className="flex justify-center mb-4">
-          <Logo size="lg" showText={false} />
-        </div>
         <h1 className="text-2xl font-bold text-foreground mb-2">
           Create your Striveframe account
         </h1>
@@ -64,7 +60,7 @@ const Signup = () => {
           <input
             type="text"
             placeholder="Your name"
-            className="input-dark"
+            className="input-styled"
           />
         </div>
 
@@ -75,7 +71,7 @@ const Signup = () => {
           <input
             type="email"
             placeholder="you@example.com"
-            className="input-dark"
+            className="input-styled"
           />
         </div>
 
@@ -86,7 +82,7 @@ const Signup = () => {
           <input
             type="password"
             placeholder="••••••••"
-            className="input-dark"
+            className="input-styled"
           />
         </div>
 
