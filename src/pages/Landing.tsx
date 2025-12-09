@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
-import { MockTodayCard } from "@/components/MockTodayCard";
+import { FeatureCarousel } from "@/components/FeatureCarousel";
 import { FeatureCard } from "@/components/FeatureCard";
 import { Sparkles, Flame, ArrowRightLeft } from "lucide-react";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-gradient-radial overflow-hidden">
+    <div className="min-h-screen bg-gradient-subtle overflow-hidden">
       <Navbar variant="landing" />
 
       {/* Hero Section */}
@@ -31,12 +31,20 @@ const Landing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed"
+                className="text-lg text-muted-foreground mb-4 max-w-xl leading-relaxed"
               >
-                Create time-bound journeys for life's biggest changes. Whether
-                you're losing weight, quitting smoking, switching careers, or
-                moving countries — Striveframe breaks it down into daily,
-                actionable steps powered by AI.
+                Create structured, time-bound journeys for life's biggest changes. 
+                Whether you're losing weight, quitting smoking, switching careers, or
+                moving countries — Striveframe breaks it down into daily, actionable steps.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="text-sm text-muted-foreground mb-8"
+              >
+                No overwhelm. Just one day at a time.
               </motion.p>
 
               <motion.div
@@ -46,17 +54,17 @@ const Landing = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link to="/signup" className="btn-primary text-center">
-                  Start a 100-day journey
+                  Start your journey
                 </Link>
-                <Link to="/login" className="btn-secondary text-center">
-                  Log in to continue
+                <Link to="/create-journey" className="btn-secondary text-center">
+                  Start your next habit
                 </Link>
               </motion.div>
             </div>
 
-            {/* Right: Mock Card */}
+            {/* Right: Feature Carousel */}
             <div className="flex justify-center lg:justify-end">
-              <MockTodayCard />
+              <FeatureCarousel />
             </div>
           </div>
         </div>

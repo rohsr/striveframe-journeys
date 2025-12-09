@@ -45,7 +45,7 @@ const CreateJourney = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-radial">
+    <div className="min-h-screen bg-gradient-subtle">
       <Navbar variant="app" />
 
       <main className="pt-28 pb-12 px-4">
