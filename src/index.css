@@ -122,7 +122,8 @@
 
 @layer utilities {
   .font-display {
-    font-family: "SB Skate Blade", system-ui, sans-serif;
+    font-family: "Bebas Neue", "SB Skate Blade", system-ui, sans-serif;
+    letter-spacing: 0.05em;
   }
 
   .bg-gradient-main {

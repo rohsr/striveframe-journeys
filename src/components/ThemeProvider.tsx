@@ -47,10 +47,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     setIsAnimating(true);
     
-    // Small delay to allow animation to start
-    setTimeout(() => {
-      setTheme((prev) => (prev === "light" ? "dark" : "light"));
-    }, 50);
+    // Toggle theme immediately
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
     // Reset animation state after animation completes
     setTimeout(() => {

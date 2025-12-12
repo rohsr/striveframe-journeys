@@ -5,6 +5,8 @@ import { useTheme } from "./ThemeProvider";
 export const ThemeToggle = () => {
   const { theme, toggleTheme, isAnimating, togglePosition } = useTheme();
 
+  const isDark = theme === "dark";
+
   return (
     <>
       {/* Theme transition overlay */}
@@ -13,20 +15,19 @@ export const ThemeToggle = () => {
           <motion.div
             key="theme-overlay"
             initial={{ 
-              clipPath: theme === "dark" 
-                ? `circle(0% at ${togglePosition.x}px ${togglePosition.y}px)`
-                : `circle(150% at ${togglePosition.x}px ${togglePosition.y}px)`
+              clipPath: `circle(0% at ${togglePosition.x}px ${togglePosition.y}px)`
             }}
             animate={{ 
-              clipPath: theme === "dark" 
-                ? `circle(150% at ${togglePosition.x}px ${togglePosition.y}px)`
-                : `circle(0% at ${togglePosition.x}px ${togglePosition.y}px)`
+              clipPath: `circle(150% at ${togglePosition.x}px ${togglePosition.y}px)`
             }}
-            exit={{ opacity: 0 }}
+            exit={{ 
+              clipPath: `circle(150% at ${togglePosition.x}px ${togglePosition.y}px)`,
+              opacity: 0 
+            }}
             transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
             className="fixed inset-0 z-[9999] pointer-events-none"
             style={{
-              backgroundColor: theme === "dark" 
+              backgroundColor: isDark 
                 ? "hsl(222 47% 6%)" 
                 : "hsl(210 40% 98%)",
             }}

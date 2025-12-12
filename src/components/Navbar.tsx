@@ -17,7 +17,7 @@ export const Navbar = ({ variant = "landing" }: NavbarProps) => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between">
           {/* Brand */}
-          <Link to="/" className="font-display text-2xl font-bold text-foreground tracking-tight">
+          <Link to="/" className="font-display text-3xl text-foreground uppercase">
             Striveframe
           </Link>
 
