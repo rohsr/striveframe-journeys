@@ -55,11 +55,11 @@ const Landing = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Link to="/signup" className="btn-primary text-center">
+                <Link to="/signup" className="btn-interactive text-center inline-flex items-center justify-center">
                   Start your journey
                 </Link>
-                <Link to="/create-journey" className="btn-secondary text-center">
-                  Start your next habit
+                <Link to="/onboarding" className="btn-secondary-interactive text-center inline-flex items-center justify-center">
+                  Explore features
                 </Link>
               </motion.div>
             </div>
