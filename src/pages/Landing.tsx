@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { FeatureCarousel } from "@/components/FeatureCarousel";
 import { FeatureCard } from "@/components/FeatureCard";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { Sparkles, Flame, ArrowRightLeft } from "lucide-react";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-gradient-subtle overflow-hidden">
+    <div className="min-h-screen bg-gradient-subtle overflow-hidden relative">
+      <AnimatedBackground />
       <Navbar variant="landing" />
 
       {/* Hero Section */}
