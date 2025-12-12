@@ -81,15 +81,15 @@ const ElementIcon = ({ type, label, size }: { type: FloatingElement["type"]; lab
     case "streak":
       return (
         <div 
-          className="flex flex-col items-center justify-center rounded-full bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm"
+          className="flex flex-col items-center justify-center rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm"
           style={{ width: size, height: size }}
         >
-          <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" className="text-orange-500">
+          <svg width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" className="text-primary">
             <path d="M12 2L8 8l-6 1 4.5 4.5L5 20l7-4 7 4-1.5-6.5L22 9l-6-1-4-6z" fill="currentColor" opacity="0.3"/>
             <path d="M12 2L8 8l-6 1 4.5 4.5L5 20l7-4 7 4-1.5-6.5L22 9l-6-1-4-6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           {size > 50 && (
-            <span className="text-[10px] font-bold text-orange-500/80">{Math.floor(Math.random() * 30) + 1}d</span>
+            <span className="text-[10px] font-bold text-primary/80">{Math.floor(Math.random() * 30) + 1}d</span>
           )}
         </div>
       );
@@ -97,10 +97,10 @@ const ElementIcon = ({ type, label, size }: { type: FloatingElement["type"]; lab
       const progress = 30 + Math.random() * 60;
       return (
         <div 
-          className="flex flex-col items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm p-2"
+          className="flex flex-col items-center justify-center rounded-xl bg-accent/10 border border-accent/20 backdrop-blur-sm p-2"
           style={{ width: size, height: size }}
         >
-          <svg width={iconSize} height={iconSize} viewBox="0 0 36 36" className="text-emerald-500">
+          <svg width={iconSize} height={iconSize} viewBox="0 0 36 36" className="text-accent">
             <circle cx="18" cy="18" r="15" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.2"/>
             <circle 
               cx="18" cy="18" r="15" 
@@ -113,7 +113,7 @@ const ElementIcon = ({ type, label, size }: { type: FloatingElement["type"]; lab
             />
           </svg>
           {size > 50 && (
-            <span className="text-[9px] font-bold text-emerald-500/80 -mt-1">{Math.round(progress)}%</span>
+            <span className="text-[9px] font-bold text-accent/80 -mt-1">{Math.round(progress)}%</span>
           )}
         </div>
       );
@@ -123,7 +123,7 @@ const ElementIcon = ({ type, label, size }: { type: FloatingElement["type"]; lab
           className="flex items-center justify-center"
           style={{ width: size * 0.5, height: size * 0.5 }}
         >
-          <svg width={iconSize * 0.6} height={iconSize * 0.6} viewBox="0 0 24 24" fill="currentColor" className="text-yellow-400/60">
+          <svg width={iconSize * 0.6} height={iconSize * 0.6} viewBox="0 0 24 24" fill="currentColor" className="text-primary/60">
             <polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9" />
           </svg>
         </div>
