@@ -11,6 +11,8 @@ import Onboarding from "./pages/Onboarding";
 import Home from "./pages/Home";
 import CreateJourney from "./pages/CreateJourney";
 import JourneyDetail from "./pages/JourneyDetail";
+import Activity from "./pages/Activity";
+import Diary from "./pages/Diary";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/home" element={<Home />} />
             <Route path="/create-journey" element={<CreateJourney />} />
             <Route path="/journeys/:id" element={<JourneyDetail />} />
+            <Route path="/activity" element={<Activity />} />
+            <Route path="/diary" element={<Diary />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
